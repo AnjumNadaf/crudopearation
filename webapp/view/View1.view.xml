@@ -1,0 +1,124 @@
+<mvc:View xmlns:tnt="sap.tnt"
+    controllerName="crudopearation.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+	xmlns:sf="sap.ui.layout.form"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+				
+
+					<Table id="tableid" items="{myModel>/dataSet}" >
+						<headerToolbar>
+					<OverflowToolbar id="otbSubheader">
+						<Title text="CRUD Operation" level="H2" />
+						<ToolbarSpacer />
+						<Button id="editButton" text="Create" type="Transparent"
+							press="onOpen" />
+						
+					</OverflowToolbar>
+				</headerToolbar>
+					
+							<columns>
+								
+								<Column>
+									<Label text="ID"></Label>
+								</Column>
+								<!-- <Column>
+									<Label text="Name"></Label>
+								</Column> -->
+								<Column>
+									<Label text="Name"></Label>
+								</Column>
+								<Column>
+								<Label text="Email"></Label>
+								</Column>
+								<Column>
+								<Label text="City"></Label>
+								</Column>
+								<Column>
+								<Label text="Number"></Label>
+								</Column>
+								<Column>
+									<Label text="Edit"></Label>
+								</Column>
+								<Column>
+									<Label text="Delete"></Label>
+								</Column>
+								
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										
+										<Input value="{myModel>Empid}"/>
+										<!-- <Input value="{myModel>​Empname}"/> -->
+										<Input value="{myModel>Empname}"/>
+										<Input value="{myModel>Emailid}"/>
+										<Input value="{myModel>City}"/>
+										<Input value="{myModel>Mblnum}"/>
+										<Button text="Edit"  press="onEdit"></Button>
+										<Button text="Delete" press="onDelete"></Button>
+										
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<VBox fitContainer="true" alignItems="Start" justifyContent="Start">
+					<sf:SimpleForm editable="true" id="simpleformid" visible="false">
+					<VBox alignContent="Start" justifyContent="Start">
+					<HBox alignContent="Start" justifyContent="Start">
+					<Input  id="pid" value="" placeholder="Enter Id" width="25rem"></Input>
+					</HBox>
+
+					
+
+
+					<HBox alignContent="Start" justifyContent="Start">
+					<Input id="name" value="" placeholder="Enter Your Name"  width="25rem"></Input>
+					</HBox>
+
+					<HBox alignContent="Start" justifyContent="Start">
+					<Input id="emailid" value="" placeholder="Enter Email "  width="25rem"></Input>
+
+					</HBox>
+
+					<HBox alignContent="Start" justifyContent="Start">
+					<Input id="cityid" value="" placeholder="Enter City"  width="25rem"></Input>
+					</HBox>
+
+
+					<HBox alignContent="Start" justifyContent="Start">
+					<Input id="phonenum" value="" placeholder="Enter Number"  width="25rem"></Input>
+					</HBox>
+
+					
+
+					
+
+					
+
+					<HBox alignContent="Start" justifyContent="Start">
+					
+				 
+				 <Button id="loginid2"  text="Save" press="onCreate" width="5rem" visible="true"/>
+				 <Button id="loginid1"  text="Update" press="onUpdate" width="5rem" />
+				 <Button id="cancelbtn" text="Cancel" press="onCancel" width="5rem"/>
+					
+					
+					</HBox>
+					</VBox>
+					</sf:SimpleForm>
+					</VBox>
+
+
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
